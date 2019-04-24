@@ -1,17 +1,21 @@
 #include "stdafx.h"
 #include "CppUnitTest.h"
+#include "../AiStrD4_3/Huffman.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
-namespace HuffmanTest
+namespace HuffmanTests
 {		
 	TEST_CLASS(UnitTest1)
 	{
 	public:
 		
-		TEST_METHOD(TestMethod1)
+		TEST_METHOD(encode_string_one_symbol)
 		{
-			// TODO: Разместите здесь код своего теста
+			Huffman alg;
+			string encoded = alg.encode_string("777777");
+			string expected = "000000";
+			Assert::IsTrue(encoded == expected);
 		}
 
 	};
